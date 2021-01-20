@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class PlayingCard extends StatelessWidget {
+  final suit;
+  final color;
+  final number;
+
+  PlayingCard({this.suit, this.color, this.number});
+// @todo: continue from 4:09
   @override
   Widget build(BuildContext context) {
     return Padding(
