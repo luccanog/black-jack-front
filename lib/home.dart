@@ -14,19 +14,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("lib/assets/table-felt-2.png"),
-              repeat: ImageRepeat.repeat),
-        ),
-        child: Center(
+      body: Scaffold(
+        backgroundColor: Colors.green[900],
+        body: Center(
           child: Container(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PlayingCard(),
+                    PlayingCard(),
+                  ],
+                ),
                 PlayingCard(),
-                PlayingCard(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    PlayingCard(),
+                    PlayingCard(),
+                  ],
+                )
               ],
             ),
           ),
