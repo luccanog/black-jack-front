@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'card/card.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -11,20 +14,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[900],
+      backgroundColor: Color.fromRGBO(0, 66, 0, 1),
       body: Center(
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                color: Colors.white,
-                height: 100,
-                width: 50,
-              )
-            ],
+            children: [PlayingCard()],
           ),
-        ),),
+        ),
+      ),
     );
   }
 }
