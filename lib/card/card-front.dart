@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:blackjack/card/card-suits.dart';
 import 'package:flutter/material.dart';
 
 class PlayingCard extends StatelessWidget {
@@ -9,6 +8,7 @@ class PlayingCard extends StatelessWidget {
   final number;
 
   PlayingCard({this.suit, this.color, this.number});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,25 +27,25 @@ class PlayingCard extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '10',
+                      number,
                       style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: color),
                     ),
                   ],
                 ),
-                heart(),
+                suit,
                 Transform.rotate(
                   angle: pi,
                   child: Row(
                     children: [
                       Text(
-                        '10',
+                        number,
                         style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: color),
                       ),
                     ],
                   ),

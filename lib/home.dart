@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'card/card-back.dart';
 import 'card/card-front.dart';
 
+import 'package:blackjack/card/card-suits.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -25,16 +27,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    PlayingCard(),
-                    PlayingCard(),
+                    PlayingCard(
+                      suit: clover(),
+                      color: Colors.black,
+                      number: 'J',
+                    ),
+                    PlayingCard(
+                      suit: diamond(),
+                      color: Colors.red[900],
+                      number: '9',
+                    ),
                   ],
                 ),
                 CardBack(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    PlayingCard(),
-                    PlayingCard(),
+                    PlayingCard(
+                      suit: heart(),
+                      color: Colors.red[900],
+                      number: 'K',
+                    ),
+                    PlayingCard(
+                      suit: spade(),
+                      color: Colors.black,
+                      number: '6',
+                    ),
                   ],
                 )
               ],
