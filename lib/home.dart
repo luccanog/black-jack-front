@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'card/card-back.dart';
@@ -39,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                CardBack(),
+                Transform.rotate(angle: pi / 2, child: CardBack()),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
