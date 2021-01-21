@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:blackjack/card/card-suits.dart';
 import 'package:flutter/material.dart';
 
 class PlayingCard extends StatelessWidget {
@@ -14,14 +17,41 @@ class PlayingCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         child: Container(
             color: Colors.white,
+            padding: EdgeInsets.all(5),
             height: 150,
             width: 100,
             child: Center(
-              child: Text(
-                '♣',
-                style: TextStyle(fontSize: 40),
-              ),
-            )),
+                child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      '10',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                heart(),
+                Transform.rotate(
+                  angle: pi,
+                  child: Row(
+                    children: [
+                      Text(
+                        '10',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ))),
       ),
     );
   }
