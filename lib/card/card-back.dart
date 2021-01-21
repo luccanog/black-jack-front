@@ -7,14 +7,14 @@ class CardBack extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(7),
         child: Container(
           color: Colors.white,
           height: 150,
           width: 100,
           child: FittedBox(
             child: Image.asset(
-              'lib/assets/playing-card-back.png',
+              'lib/assets/card-back.png',
             ),
             fit: BoxFit.fill,
           ),
