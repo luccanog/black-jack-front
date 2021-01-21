@@ -6,7 +6,6 @@ class PlayingCard extends StatelessWidget {
   final number;
 
   PlayingCard({this.suit, this.color, this.number});
-// @todo: continue from 4:09
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,11 +13,15 @@ class PlayingCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Container(
-          color: Colors.white,
-          height: 150,
-          width: 100,
-          child: Container(),
-        ),
+            color: Colors.white,
+            height: 150,
+            width: 100,
+            child: Center(
+              child: Text(
+                '♣',
+                style: TextStyle(fontSize: 40),
+              ),
+            )),
       ),
     );
   }
