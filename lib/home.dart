@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'card/card.dart';
+import 'card/card-back.dart';
+import 'card/card-front.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -28,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     PlayingCard(),
                   ],
                 ),
-                PlayingCard(),
+                CardBack(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
